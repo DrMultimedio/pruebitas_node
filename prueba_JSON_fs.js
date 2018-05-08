@@ -1,0 +1,33 @@
+  const fs = require("fs");
+  let id = "holi";
+  let opciones = {};
+  opciones.nombre = "jamon";
+  opciones.correo = "asdf";
+  opciones.telefono = "135353";
+  opciones.direccion = "asdf";
+  opciones.empresas = [];
+  let empresa = {};
+  empresa.nombreEmpresa = "fdsa"; 
+  empresa.puestoEmpresa = "engeniero"; 
+  empresa.inicioEmpresa = "2012"; 
+  empresa.finEmpresa = "2014"; 
+  opciones.empresas.push(empresa);
+  opciones.nombreTitulacion = "Ing. Mult"; 
+  opciones.centroTitulacion = "asdf"; 
+  opciones.inicioEstudios = "adsf"; 
+  opciones.finEstudios = "asdf"; 
+  opciones.datosExtra = "adsf";
+  opciones.extraEmpresa = "adsf";
+  opciones.foto = "foto";
+  opciones.skill = "skill";
+  opciones.datosSkill = "asdf";
+  opciones.nombreArchivo = "fdas";
+  console.log(opciones);
+  fs.writeFileSync(id + 'vars.json', JSON.stringify(opciones) );
+
+  let pruebinha = fs.readFileSync('holivars.json', 'utf-8');
+
+  pruebinha = JSON.parse(pruebinha);
+  console.log(pruebinha);
+  console.log();
+  console.log(pruebinha.nombre);
